@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginPage">
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Giriş yapınız veya kayıt olunuz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:id="@+id/baslik"/>
+    <TextView
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Eğer kayıtlı değilseniz tıklayınız..."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:textSize="18dp"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:id="@+id/register"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:hint="Mail adresin..."
+        android:textColorHint="#D8D6D6"
+        android:paddingStart="10dp"
+        android:id="@+id/edittext"
+        app:layout_constraintTop_toBottomOf="@id/baslik"
+        android:background="@drawable/edittextshape"/>
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:hint="Şifreniz..."
+        android:textColorHint="#D8D6D6"
+        android:paddingStart="10dp"
+        android:id="@+id/edittext2"
+        app:layout_constraintTop_toBottomOf="@id/edittext"
+        android:background="@drawable/edittextshape"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:id="@+id/ileri"
+        android:text="İleri"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:paddingStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/edittext2"
+        android:background="@drawable/ilerishapepaddingaz"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#D8D6D6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ileri"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toStartOf="@id/veya"
+        app:layout_constraintWidth_percent="0.35"
+        android:id="@+id/leftdivider"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#D8D6D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ileri"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toEndOf="@id/veya"
+        app:layout_constraintWidth_percent="0.35"
+        android:id="@+id/rightdivider"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Veya"
+        android:id="@+id/veya"
+        android:textColor="#D8D6D6"
+        app:layout_constraintStart_toEndOf="@id/leftdivider"
+        app:layout_constraintTop_toBottomOf="@id/ileri"
+        app:layout_constraintEnd_toStartOf="@id/rightdivider"
+        android:layout_marginTop="60dp"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:id="@+id/misafir"
+        android:text="Misafir olarak devam et..."
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:paddingStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/veya"
+        android:background="@drawable/ilerishapepaddingaz"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F4E2E2"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/profilephotoshape"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/profilePhoto"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kullanıcı Adı"
+        android:id="@+id/userName"
+        app:layout_constraintStart_toEndOf="@id/profilePhoto"
+        app:layout_constraintTop_toTopOf="@id/profilePhoto"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9.6"
+        android:id="@+id/rating"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        app:layout_constraintStart_toStartOf="@id/userName"
+        />
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/star"
+       app:layout_constraintTop_toTopOf="@id/rating"
+        app:layout_constraintStart_toEndOf="@id/rating"
+        app:layout_constraintBottom_toBottomOf="@id/rating"
+        android:layout_marginStart="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/rating"
+        app:layout_constraintTop_toBottomOf="@id/rating"
+        android:text="yigitumut2002@gmail.com"
+        android:id="@+id/mail"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Araç Bilgileri"
+        app:layout_constraintTop_toBottomOf="@id/profilePhoto"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/profilePhoto"
+        android:layout_marginTop="20dp"
+        android:id="@+id/carInfoTitle"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="34 EP 0095"
+        app:layout_constraintStart_toStartOf="@id/carInfoTitle"
+        app:layout_constraintTop_toBottomOf="@id/carInfoTitle"
+        android:id="@+id/carPlate"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fiat Egea"
+        android:id="@+id/model"
+        app:layout_constraintStart_toStartOf="@id/carInfoTitle"
+        app:layout_constraintTop_toBottomOf="@id/carPlate"
+        />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/activePassive"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sarı"
+        android:id="@+id/color"
+        app:layout_constraintStart_toStartOf="@id/carInfoTitle"
+        app:layout_constraintTop_toBottomOf="@id/model"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Çalışma Bilgileri"
+        android:id="@+id/workInformation"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/carInfoTitle"
+        app:layout_constraintTop_toBottomOf="@id/color"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meşgul"
+        android:id="@+id/work"
+        app:layout_constraintStart_toStartOf="@id/workInformation"
+        app:layout_constraintTop_toBottomOf="@id/workInformation"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="157 Tamamlanan Yolculuk"
+        android:id="@+id/completedJourney"
+        app:layout_constraintStart_toStartOf="@id/workInformation"
+        app:layout_constraintTop_toBottomOf="@id/work"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.075"
+        android:layout_margin="20dp"
+        android:background="@drawable/ilerishapepaddingaz"
+        android:text="İşe Başla"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/completedJourney"
+        />
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

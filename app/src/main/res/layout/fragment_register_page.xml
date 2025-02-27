@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegisterPage">
+
+    <TextView
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="İstenilen bilgileri giriniz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:id="@+id/baslik"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:hint="Mail adresin..."
+        android:textColorHint="#D8D6D6"
+        android:paddingStart="10dp"
+        android:id="@+id/edittext"
+        app:layout_constraintTop_toBottomOf="@id/baslik"
+        android:background="@drawable/edittextshape"/>
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:hint="Şİfreniz"
+        android:textColorHint="#D8D6D6"
+        android:paddingStart="10dp"
+        android:id="@+id/edittext2"
+        app:layout_constraintTop_toBottomOf="@id/edittext"
+        android:background="@drawable/edittextshape"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:id="@+id/ileri"
+        android:text="Kayıt Ol"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:paddingStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/edittext2"
+        android:background="@drawable/ilerishapepaddingaz"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
