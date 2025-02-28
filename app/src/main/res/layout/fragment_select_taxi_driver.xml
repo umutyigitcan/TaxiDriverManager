@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F4E2E2"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SelectTaxiDriverFragment">
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@id/profile"
+        app:layout_constraintStart_toEndOf="@id/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/chat"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/chat"/>
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@id/chat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/home"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/home"/>
+
+
+
+
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/profile"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toEndOf="@id/chat"
+        android:id="@+id/profile"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.075"
+        android:text="Taksi Sürücüleri"
+        android:gravity="start|center"
+        android:textSize="20dp"
+        android:id="@+id/userName"
+        android:paddingStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        app:layout_constraintBottom_toTopOf="@id/home"
+        android:id="@+id/rv"
+        android:layout_margin="20dp"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

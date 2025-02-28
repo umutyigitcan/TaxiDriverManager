@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
-    app:startDestination="@id/homePage">
+    app:startDestination="@id/selectTaxiDriverFragment">
 
     <fragment
         android:id="@+id/loginPage"
@@ -27,10 +27,35 @@
         <action
             android:id="@+id/action_homePage_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homePage_to_taxiDriverChatFragment"
+            app:destination="@id/taxiDriverChatFragment" />
+        <action
+            android:id="@+id/action_homePage_to_selectTaxiDriverFragment"
+            app:destination="@id/selectTaxiDriverFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.taxidrivercontrol.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/taxiDriverChatFragment"
+        android:name="com.example.taxidrivercontrol.TaxiDriverChatFragment"
+        android:label="fragment_taxi_driver_chat"
+        tools:layout="@layout/fragment_taxi_driver_chat" />
+    <fragment
+        android:id="@+id/managerChatFragment"
+        android:name="com.example.taxidrivercontrol.ManagerChatFragment"
+        android:label="fragment_manager_chat"
+        tools:layout="@layout/fragment_manager_chat" />
+    <fragment
+        android:id="@+id/selectTaxiDriverFragment"
+        android:name="com.example.taxidrivercontrol.SelectTaxiDriverFragment"
+        android:label="fragment_select_taxi_driver"
+        tools:layout="@layout/fragment_select_taxi_driver" >
+        <action
+            android:id="@+id/action_selectTaxiDriverFragment_to_managerChatFragment"
+            app:destination="@id/managerChatFragment" />
+    </fragment>
 </navigation>

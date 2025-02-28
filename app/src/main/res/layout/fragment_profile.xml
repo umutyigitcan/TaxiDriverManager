@@ -7,6 +7,39 @@
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
 
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@id/profile"
+        app:layout_constraintStart_toEndOf="@id/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/chat"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/chat"/>
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@id/chat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/home"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/home"/>
+
+
+
+
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/profile"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toEndOf="@id/chat"
+        android:id="@+id/profile"/>
+
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -132,10 +165,28 @@
         android:text="İşe Başla"
         android:textColor="@color/white"
         android:textAllCaps="false"
+        android:id="@+id/startWork"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/completedJourney"
         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.075"
+        android:layout_margin="20dp"
+        android:background="@drawable/ilerishapepaddingaz"
+        android:text="Yönetici Paneli"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:id="@+id/adminPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startWork"
+        />
+
+
 
 
 

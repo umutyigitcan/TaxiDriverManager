@@ -6,6 +6,9 @@ plugins {
 android {
     namespace = "com.example.taxidrivercontrol"
     compileSdk = 35
+    buildFeatures{
+        viewBinding=true
+    }
 
     defaultConfig {
         applicationId = "com.example.taxidrivercontrol"
