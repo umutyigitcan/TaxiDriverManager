@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
-    app:startDestination="@id/registerPage">
+    app:startDestination="@id/loginPage">
 
     <fragment
         android:id="@+id/loginPage"
@@ -21,7 +21,11 @@
         android:id="@+id/registerPage"
         android:name="com.example.taxidrivercontrol.RegisterPage"
         android:label="fragment_register_page"
-        tools:layout="@layout/fragment_register_page" />
+        tools:layout="@layout/fragment_register_page" >
+        <action
+            android:id="@+id/action_registerPage_to_loginPage"
+            app:destination="@id/loginPage" />
+    </fragment>
     <fragment
         android:id="@+id/homePage"
         android:name="com.example.taxidrivercontrol.HomePage"

@@ -34,6 +34,10 @@ class LoginPage : Fragment() {
                         if(user!=null){
                             val key=p.key
                             if(user.userMail==mail.toString()&&user.userPassword==password.toString()){
+
+                                var vt=SavedUserSQLite(requireContext())
+                                SavedUserSQLiteDao().changeUser(vt,user.userName.toString(),user.userMail.toString(),user.userPassword.toString())
+
                                 Navigation.findNavController(it).navigate(R.id.action_loginPage_to_homePage)
                             }
 
@@ -45,6 +49,10 @@ class LoginPage : Fragment() {
 
                 }
             })
+        }
+
+        binding.register.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_loginPage_to_registerPage)
         }
 
 

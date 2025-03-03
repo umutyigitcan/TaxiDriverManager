@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.taxidrivercontrol.databinding.FragmentRegisterPageBinding
 import com.google.firebase.Firebase
 import com.google.firebase.database.FirebaseDatabase
@@ -26,6 +27,7 @@ class RegisterPage : Fragment() {
             var password=binding.edittext2.text
             var user=UserData(mail.toString(),userName.toString(),password.toString(),"admin")
             Users.push().setValue(user)
+            Navigation.findNavController(it).navigate(R.id.action_registerPage_to_loginPage)
 
         }
 
