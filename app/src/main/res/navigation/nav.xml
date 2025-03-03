@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
-    app:startDestination="@id/adminPanel2">
+    app:startDestination="@id/registerPage">
 
     <fragment
         android:id="@+id/loginPage"
@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginPage_to_registerPage"
             app:destination="@id/registerPage" />
+        <action
+            android:id="@+id/action_loginPage_to_homePage"
+            app:destination="@id/homePage" />
     </fragment>
     <fragment
         android:id="@+id/registerPage"

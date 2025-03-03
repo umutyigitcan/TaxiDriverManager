@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "559603713271",
+    "project_id": "taxidrivermanagment",
+    "storage_bucket": "taxidrivermanagment.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559603713271:android:d2667a6e4024d4c49dfff2",
+        "android_client_info": {
+          "package_name": "com.example.taxidrivercontrol"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5MoX7b54ENEOE_YQoDRkAzyGENhxgrLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
