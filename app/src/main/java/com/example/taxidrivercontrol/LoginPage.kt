@@ -14,33 +14,33 @@ import com.google.firebase.database.ValueEventListener
 
 class LoginPage : Fragment() {
 
+    private lateinit var binding: FragmentLoginPageBinding
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        binding = FragmentLoginPageBinding.inflate(inflater, container, false)
 
-    private lateinit var binding:FragmentLoginPageBinding
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding= FragmentLoginPageBinding.inflate(inflater,container,false)
-
-        var database=FirebaseDatabase.getInstance()
-        var Users=database.getReference("Users")
+        val database = FirebaseDatabase.getInstance()
+        val Users = database.getReference("Users")
 
         binding.login.setOnClickListener {
-            var mail=binding.edittext.text
-            var password=binding.edittext2.text
-            Users.addValueEventListener(object :ValueEventListener{
+            val mail = binding.edittext.text
+            val password = binding.edittext2.text
+
+            Users.addListenerForSingleValueEvent(object : ValueEventListener { // 🔹 Değişiklik burada
                 override fun onDataChange(ds: DataSnapshot) {
-                    for(p in ds.children){
-                        val user=p.getValue(UserData::class.java)
+                    for (p in ds.children) {
+                        val user = p.getValue(UserData::class.java)
 
-                        if(user!=null){
-                            val key=p.key
-                            if(user.userMail==mail.toString()&&user.userPassword==password.toString()){
+                        if (user != null) {
+                            if (user.userMail == mail.toString() && user.userPassword == password.toString()) {
 
-                                var vt=SavedUserSQLite(requireContext())
-                                SavedUserSQLiteDao().changeUser(vt,user.userName.toString(),user.userMail.toString(),user.userPassword.toString())
+                                val vt = SavedUserSQLite(requireContext())
+                                SavedUserSQLiteDao().changeUser(vt, user.userName.toString(), user.userMail.toString(), user.userPassword.toString())
 
-                                Navigation.findNavController(it).navigate(R.id.action_loginPage_to_homePage)
+                                if (isAdded) { // 🔹 Eğer fragment hala aktifse gezinmeyi gerçekleştir.
+                                    Navigation.findNavController(requireView()).navigate(R.id.action_loginPage_to_homePage)
+                                }
                             }
-
                         }
                     }
                 }
@@ -52,11 +52,8 @@ class LoginPage : Fragment() {
         }
 
         binding.register.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_loginPage_to_registerPage)
+            Navigation.findNavController(requireView()).navigate(R.id.action_loginPage_to_registerPage)
         }
-
-
-
 
         return binding.root
     }
