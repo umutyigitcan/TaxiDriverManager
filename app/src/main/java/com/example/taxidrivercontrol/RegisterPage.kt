@@ -25,6 +25,7 @@ class RegisterPage : Fragment() {
             var mail=binding.edittext.text
             var userName=binding.edittextname.text
             var password=binding.edittext2.text
+            var vt=SavedUserSQLite(requireContext())
             var user=UserData(mail.toString(),userName.toString(),password.toString(),"admin")
             Users.push().setValue(user)
             Navigation.findNavController(it).navigate(R.id.action_registerPage_to_loginPage)

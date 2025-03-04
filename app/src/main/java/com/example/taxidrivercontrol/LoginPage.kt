@@ -26,7 +26,7 @@ class LoginPage : Fragment() {
             val mail = binding.edittext.text
             val password = binding.edittext2.text
 
-            Users.addListenerForSingleValueEvent(object : ValueEventListener { // 🔹 Değişiklik burada
+            Users.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(ds: DataSnapshot) {
                     for (p in ds.children) {
                         val user = p.getValue(UserData::class.java)
@@ -37,7 +37,7 @@ class LoginPage : Fragment() {
                                 val vt = SavedUserSQLite(requireContext())
                                 SavedUserSQLiteDao().changeUser(vt, user.userName.toString(), user.userMail.toString(), user.userPassword.toString())
 
-                                if (isAdded) { // 🔹 Eğer fragment hala aktifse gezinmeyi gerçekleştir.
+                                if (isAdded) {
                                     Navigation.findNavController(requireView()).navigate(R.id.action_loginPage_to_homePage)
                                 }
                             }
